@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#181426" />
+  <meta name="description" content="A special birthday experience for Rithika" />
+  <title>For Rithika ✨</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+    <div class="ambient ambient-three"></div>
+
+    <!-- PASSWORD SCREEN -->
+    <main class="screen active" id="passwordScreen" aria-label="Password screen">
+      <div class="screen-inner password-inner">
+        <section class="glass-card password-card">
+          <div class="tiny-label">A little secret first</div>
+          <div class="dog-badge" aria-hidden="true">🐶</div>
+          <h1>Someone special is waiting.</h1>
+          <p class="subtext">Only the right 8 digits can open this little world.</p>
+
+          <div class="password-layout">
+            <div class="password-portrait-wrap">
+              <div class="portrait-frame">
+                <img id="passwordPhoto" src="images/password.jpg" alt="Rithika" />
+                <div class="portrait-shine"></div>
+              </div>
+              <span class="portrait-note">just a tiny preview ♡</span>
+            </div>
+
+            <div class="password-panel">
+              <div class="pin-dots" id="pinDots" aria-label="Password digits">
+                <span class="pin-dot"></span>
+                <span class="pin-dot"></span>
+                <span class="pin-dot"></span>
+                <span class="pin-dot"></span>
+                <span class="pin-dot"></span>
+                <span class="pin-dot"></span>
+                <span class="pin-dot"></span>
+                <span class="pin-dot"></span>
+              </div>
+
+              <p class="password-hint">nalla yosi ,apdiyum therla na yenaku msg pannu</p>
+              <p class="password-status" id="passwordStatus" aria-live="polite"></p>
+
+              <div class="keypad" id="keypad">
+                <button class="key" type="button" data-key="1">1</button>
+                <button class="key" type="button" data-key="2">2</button>
+                <button class="key" type="button" data-key="3">3</button>
+                <button class="key" type="button" data-key="4">4</button>
+                <button class="key" type="button" data-key="5">5</button>
+                <button class="key" type="button" data-key="6">6</button>
+                <button class="key" type="button" data-key="7">7</button>
+                <button class="key" type="button" data-key="8">8</button>
+                <button class="key" type="button" data-key="9">9</button>
+                <button class="key key-small" type="button" data-action="clear">CLR</button>
+                <button class="key" type="button" data-key="0">0</button>
+                <button class="key key-small" type="button" data-action="delete" aria-label="Delete last digit">⌫</button>
+              </div>
+
+              <button class="primary-btn unlock-btn" id="unlockBtn" type="button">Unlock ✨</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- OPENING SCREEN -->
+    <section class="screen" id="openingScreen" aria-label="Opening screen">
+      <div class="decor-layer opening-decor" aria-hidden="true">
+        <span class="spark spark-a">✦</span>
+        <span class="spark spark-b">✧</span>
+        <span class="spark spark-c">⋆</span>
+        <span class="float-heart heart-a">♡</span>
+        <span class="float-heart heart-b">♡</span>
+      </div>
+      <div class="screen-inner centered-content">
+        <div class="eyebrow">a little something, made just for you</div>
+        <div class="opening-orb">
+          <span>✦</span>
+        </div>
+        <h1 class="opening-title">Hey Rithika</h1>
+        <p class="opening-line">unakku na onnu panniruken ☺</p>
+        <p class="opening-caption">So before you judge... paathu mudichitu dhaan judge pannu. 😌</p>
+        <button class="primary-btn" id="openingEnterBtn" type="button">Enter →</button>
+      </div>
+    </section>
+
+    <!-- PAAKANUMA SCREEN -->
+    <section class="screen" id="paakanumaScreen" aria-label="Paakanuma interaction">
+      <div class="screen-inner centered-content teasing-content">
+        <div class="cute-badge">one tiny question</div>
+        <div class="question-face" aria-hidden="true">👀</div>
+        <h2>Paakanuma? 👀</h2>
+        <p class="question-subtext" id="questionSubtext">Konjam mattum paathutu po... 😌</p>
+        <div class="choice-area" id="choiceArea">
+          <button class="choice-btn yes-btn" id="yesBtn" type="button">YES ✨</button>
+          <button class="choice-btn no-btn" id="noBtn" type="button">NO 🙃</button>
+        </div>
+        <p class="tease-counter" id="teaseCounter">NO clicks: 0</p>
+      </div>
+    </section>
+
+    <!-- BIRTHDAY INTRO -->
+    <section class="screen" id="introScreen" aria-label="Birthday introduction">
+      <div class="screen-inner centered-content">
+        <div class="mini-confetti" aria-hidden="true">✦ · ˚ ✧ · ✦</div>
+        <div class="intro-icon">🎁</div>
+        <div class="eyebrow">okay, you chose the dangerous button</div>
+        <h2 class="intro-title">Welcome to your little birthday universe.</h2>
+        <p class="intro-text">There is cake, there are wishes, and yes... I put way too much effort into this. 😂</p>
+        <button class="primary-btn" id="celebrateBtn" type="button">Let's celebrate 🎂</button>
+      </div>
+    </section>
+
+    <!-- CAKE SCREEN -->
+    <section class="screen" id="cakeScreen" aria-label="Cake and wishes">
+      <div class="screen-inner centered-content cake-content">
+        <div class="cake-topline">make a wish, birthday girl ✨</div>
+        <h2 class="cake-title">unakku yenna venumo kelu</h2>
+        <p class="cake-instruction">Oru wish pannitu button-a press pannu. Oru click-ku oru candle mattum pochu. Promise. 🕯️</p>
+
+        <div class="cake-stage" id="cakeStage" aria-label="Birthday cake with three candles">
+          <div class="candle-row">
+            <div class="candle" data-candle="0">
+              <div class="flame"></div>
+              <div class="wick"></div>
+              <div class="candle-body candle-pink"></div>
+            </div>
+            <div class="candle" data-candle="1">
+              <div class="flame"></div>
+              <div class="wick"></div>
+              <div class="candle-body candle-gold"></div>
+            </div>
+            <div class="candle" data-candle="2">
+              <div class="flame"></div>
+              <div class="wick"></div>
+              <div class="candle-body candle-mint"></div>
+            </div>
+          </div>
+          <div class="cake-top-layer">
+            <span class="cake-dot dot-one"></span>
+            <span class="cake-dot dot-two"></span>
+            <span class="cake-dot dot-three"></span>
+            <span class="cake-dot dot-four"></span>
+          </div>
+          <div class="cake-middle-layer"></div>
+          <div class="cake-bottom-layer"></div>
+          <div class="cake-plate"></div>
+        </div>
+
+        <p class="candle-counter" id="candleCounter">3 candles left</p>
+        <button class="primary-btn wish-btn" id="wishBtn" type="button">Make a Wish ✨</button>
+        <button class="secondary-btn hidden" id="cutCakeBtn" type="button">Cut the Cake 🎂</button>
+      </div>
+    </section>
+
+    <!-- GRAND BIRTHDAY -->
+    <section class="screen grand-screen" id="grandScreen" aria-label="Grand birthday celebration">
+      <div class="celebration-sky" aria-hidden="true">
+        <div class="balloon balloon-one">🎈</div>
+        <div class="balloon balloon-two">🎈</div>
+        <div class="balloon balloon-three">🎈</div>
+        <div class="balloon balloon-four">🎈</div>
+        <div class="star star-one">✦</div>
+        <div class="star star-two">✧</div>
+        <div class="star star-three">⋆</div>
+        <div class="ribbon ribbon-one"></div>
+        <div class="ribbon ribbon-two"></div>
+        <div class="confetti-cloud" id="confettiCloud"></div>
+      </div>
+
+      <div class="animal animal-dog" aria-hidden="true">🐶</div>
+      <div class="animal animal-cat" aria-hidden="true">🐱</div>
+      <div class="animal animal-bunny" aria-hidden="true">🐰</div>
+      <div class="animal animal-panda" aria-hidden="true">🐼</div>
+      <div class="animal animal-bear" aria-hidden="true">🐻</div>
+
+      <div class="screen-inner grand-inner">
+        <div class="celebration-card">
+          <div class="card-sparkles" aria-hidden="true">✦ ✧ ✦</div>
+          <div class="grand-eyebrow">today deserves a little more sparkle</div>
+          <h1>HAPPY 18TH<br />BIRTHDAY RITHIKA</h1>
+          <div class="headline-rule"><span>♡</span></div>
+          <p class="grand-message">May this year surprise you in the nicest ways — with laughs you didn't plan, places you didn't expect, and people who make life lighter.</p>
+          <div class="grand-stamp">18 ✨</div>
+          <button class="primary-btn grand-next-btn" id="grandNextBtn" type="button">A few frames for you →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHOTO MEMORIES -->
+    <section class="screen photo-screen" id="photoScreen" aria-label="Photo memories">
+      <div class="screen-inner photo-inner">
+        <div class="album-header">
+          <div class="eyebrow">from the celebration, quietly into your frames</div>
+          <h2>A few frames for you</h2>
+          <p>Not a museum. Just five little chances to smile. ♡</p>
+        </div>
+
+        <div class="photo-stage" id="photoStage">
+          <div class="photo-card" id="photoCard">
+            <div class="photo-tape tape-left"></div>
+            <div class="photo-tape tape-right"></div>
+            <div class="photo-image-wrap">
+              <img id="memoryImage" src="images/photo1.jpg" alt="Rithika photo 1" />
+            </div>
+            <div class="photo-caption">
+              <div class="photo-index" id="photoIndex">1 / 5</div>
+              <p id="photoMessage"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-actions">
+          <button class="primary-btn" id="nextPhotoBtn" type="button">Another blessing for eyes →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL LETTER -->
+    <section class="screen letter-screen" id="letterScreen" aria-label="Final letter">
+      <div class="screen-inner letter-inner">
+        <div class="letter-sheet">
+          <div class="letter-top-ornament">✦ ❦ ✦</div>
+          <div class="letter-meta">
+            <span>September 10, 2026</span>
+            <span>for Rithika</span>
+          </div>
+          <div class="letter-rule"></div>
+
+          <h2>Dear Rithika,</h2>
+
+          <div class="letter-body">
+            <p>I hope life gives you<br />more reasons to laugh<br />than reasons to worry.</p>
+
+            <p>I hope you meet people<br />who appreciate the way you are<br />without asking you to change.</p>
+
+            <p>I hope every dream you keep quietly to yourself<br />finds its way into reality.</p>
+
+            <p>I hope you never lose<br />that unfiltered version of you<br />that makes you, you.</p>
+
+            <p>May you have a future<br />filled with places you've never seen,<br />memories you never planned,<br />and happiness you never saw coming.</p>
+
+            <p>I hope the girl I know today<br />gets to become everything<br />the woman she dreams of being.</p>
+
+            <p>And when life gets difficult,<br />I hope you always remember<br />how much light you carry<br />even on the days you don't notice it.</p>
+
+            <p>Most of all,<br />I hope your future feels like you - genuine, open-hearted,<br />honest, outspoken, effortlessly pretty,<br />and never afraid to be exactly who you are.</p>
+
+            <p>Happy Birthday RITHIKA.<br />I hope this year becomes<br />one of those chapters<br />you'll look back on and smile.</p>
+          </div>
+
+          <div class="letter-rule"></div>
+          <div class="signature-block">
+            <div class="signature">With warmth,<br />A person who wanted to make you smile</div>
+            <div class="signature-stars">✧ ✦ ✧</div>
+          </div>
+          <div class="letter-bottom-ornament">❦ · ✦ · ❦</div>
+          <button class="primary-btn replay-btn" id="replayBtn" type="button">Replay All ↻</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
