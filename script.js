@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // --------------------------------------------------------
   // PASSWORD SCREEN
   // --------------------------------------------------------
-  const correctPassword = "11092008";
+  const correctPassword = "12092008";
   const enteredDigits = [];
   const pinDots = Array.from(document.querySelectorAll(".pin-dot"));
   const passwordStatus = document.getElementById("passwordStatus");
